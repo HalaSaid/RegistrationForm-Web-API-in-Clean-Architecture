@@ -16,7 +16,7 @@ namespace RegistrationForm.ApplicationCore.Features.Users.Commands.Models
     public class RegisterUserCommand : IRequest<Response<GetUserRegResponse>>
     {
         public int userId { get; set; }
-        public string fristName { get; set; }
+        public string fristName { get; set; } = string.Empty;
         public string? middelName { get; set; }
         public string lastName { get; set; }
         public DateTime brithDate { get; set; }
