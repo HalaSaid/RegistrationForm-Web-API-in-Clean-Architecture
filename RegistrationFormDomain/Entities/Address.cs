@@ -23,12 +23,12 @@ namespace RegistrationForm.Domain.Entities
         public int flatNumber { get; set; }
         
         public int UserId { get; set; }
-        [ForeignKey("UserId")]
-        public virtual User User { get; set; }
-        [ForeignKey("CityId")]
-        public virtual City City { get; set; }
-        [ForeignKey("GovernmentId")]
-        public virtual Government Government { get; set; }
+        //[ForeignKey("UserId")]
+        //public virtual User User { get; set; }
+        //[ForeignKey("CityId")]
+        //public virtual City City { get; set; }
+        //[ForeignKey("GovernmentId")]
+        //public virtual Government Government { get; set; }
 
     }
 }

@@ -15,20 +15,14 @@ namespace RegistrationForm.ApplicationCore.Features.Users.Commands.Models
 {
     public class RegisterUserCommand : IRequest<Response<GetUserRegResponse>>
     {
-        //public string firstName { get; set; }
-        //public string? middelName { get; set; }
-        //public string lastName { get; set; }
-        //public DateTime brithDate { get; set; }
-        //public String mobileNumber { get; set; }
-        //public String email { get; set; }
-
+        public int userId { get; set; }
         public string fristName { get; set; }
         public string? middelName { get; set; }
         public string lastName { get; set; }
         public DateTime brithDate { get; set; }
         public String mobileNumber { get; set; }
         public String email { get; set; }
-        public AddressReg? Addresses { get; set; }
+        public ICollection<AddressReg>? Addresses { get; set; }
     }
     public class AddressReg
     {
@@ -39,8 +33,6 @@ namespace RegistrationForm.ApplicationCore.Features.Users.Commands.Models
         public string buildingNumber { get; set; }
         public int flatNumber { get; set; }
         public int UserId { get; set; }
-        public virtual User User { get; set; }
-        public virtual City City { get; set; }
-        public virtual Government Government { get; set; }
+
     }
 }

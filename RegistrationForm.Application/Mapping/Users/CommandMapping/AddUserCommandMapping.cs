@@ -15,17 +15,9 @@ namespace RegistrationForm.ApplicationCore.Mapping.Users
     {
         public void AddUserCommandMapping()
         {
-            //CreateMap<RegisterUserCommand, User>();
-            var config = new MapperConfiguration(cfg =>
-            {
-                cfg.CreateMap<RegisterUserCommand, User>();
-                cfg.CreateMap<AddressReg, Address>();
-            });
-            config.AssertConfigurationIsValid();
+            CreateMap<RegisterUserCommand, User>();
+            CreateMap<AddressReg, Address>();
         }
-        //private static void HandleArrayProperties(RegisterUserCommand Reg, User User)
-        //{
-        //    User.Addresses?.ForEach(x => x.StockNumber = Convert.ToInt64(parentDto.StockNumber));
-        //}
+        
     }
 }
